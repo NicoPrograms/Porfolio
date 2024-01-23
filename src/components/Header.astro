@@ -1,0 +1,50 @@
+<header>
+    <nav id="navbar">
+        <a class="nav-a" href="#projects">Projects</a>
+        <a class="nav-a" href="#about-me">About Me</a>
+        <a class="nav-a" href="#contact">Contact</a>
+    </nav>
+</header>
+
+<style>
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    padding: 5px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+#navbar {
+    width: 350px;
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    font-size: medium;
+    border-radius: 9999px;
+    border: 2px solid black;
+    background-color: rgb(0, 0, 0, 0.5);
+    margin-top: 20px;
+    position: relative;
+    z-index: 99999;
+}
+
+.nav-a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    border-radius: 9999px;
+    padding: 4px 10px;
+}
+
+.nav-a:hover {
+    background-color: rgb(128, 128, 128, 0.5);
+}
+</style>

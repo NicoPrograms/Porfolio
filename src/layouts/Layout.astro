@@ -1,0 +1,37 @@
+---
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Nicolas Seia</title>
+	</head>
+	<body>
+		<!-- <div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div> -->
+		<Header />
+		<slot />
+		<Footer />
+	</body>
+</html>
+
+
+<style is:global>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+	background: linear-gradient(45deg, #111, #222, #222, #333, #444);
+    color: white;
+    font-family: 'Consolas', 'Courier New';
+    min-height: 100vh;
+}
+</style>

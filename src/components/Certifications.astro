@@ -1,0 +1,88 @@
+<section id="sectionPin">
+    <div class="pin-wrap-sticky">
+        <div class="pin-wrap">
+            <h2>Some achievements and learnings throughout my career as a programmer</h2>
+            <img src="./public/imgs/certifications/certificado-curso-React.png" alt="react-coruse" />
+            <img src="./public/imgs/certifications/Responsive Web certification.png" alt="responsive-web-course" />
+            <img src="./public/imgs/certifications/Machine Learning Con Python_page-0001.jpg" alt="python-course" />
+        </div>
+    </div>
+</section>
+
+<style>
+    @keyframes move {
+	to {
+		/* Move horizontally so that right edge is aligned against the viewport */
+		transform: translateX(calc(-100% + 100vw));
+		left: 0px;
+	}
+}
+
+#sectionPin {
+	/* Stretch it out, so that we create room for the horizontal scroll animation */
+	height: 400vh;
+	overflow: visible; /* To make position sticky work … */
+
+	view-timeline-name: --section-pin-tl;
+	view-timeline-axis: block;
+
+    margin-top: 120px;
+    
+}
+
+.pin-wrap-sticky {
+	/* Stick to Top */
+	height: 100vh;
+	width: 100vw;
+	position: sticky;
+	top: 0;
+
+	width: 100vw;
+	overflow-x: hidden;
+}
+
+.pin-wrap {
+	height: 100vh;
+	width: 250vmax;
+
+	/* Hook animation */
+	will-change: transform;
+	animation: linear move forwards;
+
+	/* Link animation to view-timeline */
+	animation-timeline: --section-pin-tl;
+	animation-range: contain 0% contain 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px 10vw;
+    
+}
+
+.pin-wrap h2 {
+    font-size: 2rem;
+    max-width: 400px;
+}
+
+.pin-wrap img {
+    width: auto;
+    max-width: none;
+}
+
+.pin-wrap > * {
+    min-width: 60vmax;
+    padding: 0 5vmax;
+}
+
+@media (max-width: 740px) {
+    #sectionPin {
+        height: 300vh;
+    }
+
+    .pin-wrap h2 {
+        font-size: 1.5rem;
+        max-width: 200px;
+    }
+}
+</style>
