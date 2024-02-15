@@ -179,4 +179,41 @@ li {
     color: transparent;
 }
 
+@media (max-width: 600px){
+    .skills {
+        width: 540px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .tech-skills-box {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-template-rows: repeat(4, minmax(0, 1fr));
+        justify-items: center;
+        max-width: 540px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
+    .tech-skills-box article {
+        width: 250px;
+        height: 290px;
+    }
+
+    .list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(2, minmax(0, 1fr));
+        max-width: 250px;
+        margin: 0 auto;
+    }
+}
+
 </style>
